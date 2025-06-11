@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/font/bootstrap-icons.min.css" />
+        <link rel="stylesheet" href="./assets/css/main.css" />
+    </head>
+    <body>
+        <!-- Back to top -->
+        <div class="arrow__on-top">
+            <a href="#header" class="arrow__on-top--link">
+                <i class="arrow__on-top--icon fa-solid fa-square-caret-up"> </i>
+            </a>
+        </div>
+
+        <!-- Zalo chat -->
+        <div class="zalo-chat">
+            <a href="#" class="zalo-chat--link">
+                <img src="assets/img/Icon_of_Zalo.svg.png" class="zalo-chat--icon" alt="Zalo" />
+            </a>
+        </div>
+
+        <!-- Header -->
+        <header class="header" id="header">
+            <nav class="header__navbar navbar navbar-expand-lg fixed-top">
+                <div class="header__nav-container container">
+                    <a class="header__navbar-brand navbar-brand" href="#header">
+                        <img src="assets/img/logo.png" alt="" class="header__navbar-brand-img" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="header__navbar-list navbar-nav me-auto">
+                            <li class="header__nav-item nav-item">
+                                <a class="header__nav-link nav-link" href="/index.html">Trang chủ</a>
+                            </li>
+                            <li class="header__nav-item nav-item">
+                                <a class="header__nav-link nav-link" href="#badmintonProducts">Sản phẩm</a>
+                            </li>
+                            <li class="header__nav-item nav-item">
+                                <a class="header__nav-link nav-link" href="#sale">Sale off</a>
+                            </li>
+                            <li class="header__nav-item nav-item">
+                                <a class="header__nav-link nav-link" href="#footer">Liên hệ</a>
+                            </li>
+                        </ul>
+                        <ul class="header__navbar-list navbar-nav">
+                            <li class="header__nav-item nav-item">
+                                <a class="header__nav-link nav-link" href="#badmintonProducts"><i class="fas fa-search"></i>Tìm kiếm sản phẩm </a>
+                            </li>
+                            <li class="header__nav-item nav-item">
+                                <a class="header__nav-link nav-link" href="cart.html">
+                                    <i class="fas fa-shopping-cart"> </i>
+                                    <i id="count_cart" class="badge bg-danger"></i>
+                                    Giỏ hàng
+                                </a>
+                            </li>
+                            <li class="header__nav-item nav-item">
+                                <a class="header__nav-link nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal" id="accountLink"> <i class="fas fa-user"></i> Tài khoản </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!--AutoPlaying Carousel Header-->
+        <section id="carousel-section" class="carousel-container">
+            <div id="carouselExampleAutoplaying" class="header__carousel carousel slide" data-bs-ride="carousel">
+                <div class="header__carousel-indicators carousel-indicators">
+                    <button class="header__carousel-indicators--btn active" type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+                    <button class="header__carousel-indicators--btn" type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button class="header__carousel-indicators--btn" type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="header__carousel-inner carousel-inner">
+                    <div class="header__carousel-inner-item carousel-item active">
+                        <a href="" class="header__carousel-inner--link">
+                            <img src="assets/img/banner/1000z-launch-website-banner_1695177885.webp" class="header__carousel-inner--img d-block w-100" alt="Slide 1" />
+                        </a>
+                    </div>
+                    <div class="header__carousel-inner-item carousel-item">
+                        <a href="" class="header__carousel-inner--link">
+                            <img src="assets/img/banner/astrox88-sd-key-visual-2880x1120-_1718650445.webp" class="header__carousel-inner--img d-block w-100" alt="Slide 2" />
+                        </a>
+                    </div>
+                    <div class="header__carousel-inner-item carousel-item">
+                        <a href="" class="header__carousel-inner--link">
+                            <img src="assets/img/banner/thiet-ke-chua-co-ten-12_1727137763.webp" class="header__carousel-inner--img d-block w-100" alt="Slide 3" />
+                        </a>
+                    </div>
+                </div>
+                <button class="header__carousel-pre--btn carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="header__carousel-next--btn carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Sản phẩm nổi bật -->
+        <section id="HighlightProducts" class="py-5 bg-light">
+            <div class="product__container container">
+                <div class="product__title text-center mb-4">
+                    <h2 class="product__title--text">Sản phẩm nổi bật</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="product__item col-md-4 col-lg-3 col-6">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot1.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V200 Xanh chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V200 Xanh chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 529.000 ₫</p>
+                                <button class="product__card-btn btn w-100" data-name="Vợt cầu lông VNB V200 Xanh chính hãng" data-price=" 529.000" data-img="./assets/img/vot_sale/vot1.webp">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col-md-4 col-lg-3 col-6">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot2.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB Carbon Training 150g chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB Carbon Training 150g chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 698.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col-md-4 col-lg-3 col-6">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot3.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V200i Hồng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V200i Hồng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 529.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col-md-4 col-lg-3 col-6">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot4.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V88 xanh chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V88 xanh chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 638.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col-md-4 col-lg-3 col-6">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot5.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V200 Đỏ chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V200 Đỏ chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 529.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col-md-4 col-lg-3 col-6">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot6.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V88 cam chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V88 cam chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 638.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col-md-4 col-lg-3 col-6">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot7.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB TC88C" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB TC88C</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 799.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col-md-4 col-lg-3 col-6">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot8.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB TC88C" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB TC88C</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 799.000₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sale off -->
+        <section id="sale" class="sale_off py-5 bg-light">
+            <div class="sale__container container">
+                <div class="sale-title text-center mb-4">
+                    <h2 class="sale-title--text">Sale off</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="sale-item col-md-4 col-lg-4 h-100">
+                        <a href="#" class="sale-link">
+                            <img src="assets/img/sale/sale3.webp" class="sale-img" alt="Sản phẩm 1" />
+                        </a>
+                    </div>
+
+                    <div class="sale-item col-md-4 col-lg-4">
+                        <a href="#" class="sale-link">
+                            <img src="assets/img/sale/sale1.webp" class="sale-img" alt="Sản phẩm 3" />
+                        </a>
+                    </div>
+
+                    <div class="sale-item col-md-4 col-lg-4">
+                        <a href="#" class="sale-link">
+                            <img src="assets/img/sale/sale2.webp" class="sale-img" alt="Sản phẩm 3" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sản phẩm cầu lông -->
+        <section id="badmintonProducts" class="py-5 bg-light">
+            <div class="badmintonProducts container">
+                <div class="badmintonProducts__title text-center mb-4">
+                    <h2 class="badmintonProducts__title--text">Sản phẩm cầu lông</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="badmintonProducts__item col-md-4 col-lg-3 col-6">
+                        <div class="badmintonProducts__card card h-100">
+                            <a href="" class="badmintonProducts__card-link">
+                                <img src="assets/img/san_pham_cau_long/vot.png" class="badmintonProducts__card-img card-img-top" alt="Vợt cầu lông" />
+                            </a>
+                            <h5 class="badmintonProducts__card-title card-title">Vợt cầu lông</h5>
+                        </div>
+                    </div>
+
+                    <div class="badmintonProducts__item col-md-4 col-lg-3 col-6">
+                        <div class="badmintonProducts__card card h-100">
+                            <a href="" class="badmintonProducts__card-link">
+                                <img src="assets/img/san_pham_cau_long/giay.jpg" class="badmintonProducts__card-img card-img-top" alt="Giày cầu lông" />
+                            </a>
+                            <h5 class="badmintonProducts__card-title card-title">Giày cầu lông</h5>
+                        </div>
+                    </div>
+
+                    <div class="badmintonProducts__item col-md-4 col-lg-3 col-6">
+                        <div class="badmintonProducts__card card h-100">
+                            <a href="" class="badmintonProducts__card-link">
+                                <img src="assets/img/san_pham_cau_long/ao.jpg" class="badmintonProducts__card-img card-img-top" alt="Áo cầu lông" />
+                            </a>
+                            <h5 class="badmintonProducts__card-title card-title">Áo cầu lông</h5>
+                        </div>
+                    </div>
+
+                    <div class="badmintonProducts__item col-md-4 col-lg-3 col-6">
+                        <div class="badmintonProducts__card card h-100">
+                            <a href="" class="badmintonProducts__card-link">
+                                <img src="assets/img/san_pham_cau_long/vay.jpg" class="badmintonProducts__card-img card-img-top" alt="Váy cầu lông" />
+                            </a>
+                            <h5 class="badmintonProducts__card-title card-title">Váy cầu lông</h5>
+                        </div>
+                    </div>
+
+                    <div class="badmintonProducts__item col-md-4 col-lg-3 col-6">
+                        <div class="badmintonProducts__card card h-100">
+                            <a href="" class="badmintonProducts__card-link">
+                                <img src="assets/img/san_pham_cau_long/quan.jpg" class="badmintonProducts__card-img card-img-top" alt="Quần cầu lông" />
+                            </a>
+                            <h5 class="badmintonProducts__card-title card-title">Quần cầu lông</h5>
+                        </div>
+                    </div>
+
+                    <div class="badmintonProducts__item col-md-4 col-lg-3 col-6">
+                        <div class="badmintonProducts__card card h-100">
+                            <a href="" class="badmintonProducts__card-link">
+                                <img src="assets/img/san_pham_cau_long/tui.jpg" class="badmintonProducts__card-img card-img-top" alt="Túi vợt cầu lông" />
+                            </a>
+                            <h5 class="badmintonProducts__card-title card-title">Túi vợt cầu lông</h5>
+                        </div>
+                    </div>
+
+                    <div class="badmintonProducts__item col-md-4 col-lg-3 col-6">
+                        <div class="badmintonProducts__card card h-100">
+                            <a href="" class="badmintonProducts__card-link">
+                                <img src="assets/img/san_pham_cau_long/balo.jpg" class="badmintonProducts__card-img card-img-top" alt="Balo cầu lông" />
+                            </a>
+                            <h5 class="badmintonProducts__card-title card-title">Balo cầu lông</h5>
+                        </div>
+                    </div>
+
+                    <div class="badmintonProducts__item col-md-4 col-lg-3 col-6">
+                        <div class="badmintonProducts__card card h-100">
+                            <a href="" class="badmintonProducts__card-link">
+                                <img src="assets/img/san_pham_cau_long/phu_kien.jpg" class="badmintonProducts__card-img card-img-top" alt="Phụ kiện cầu lông" />
+                            </a>
+                            <h5 class="badmintonProducts__card-title card-title">Phụ kiện cầu lông</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer" id="footer">
+            <div class="footer__container container">
+                <div class="footer__content row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <h5 class="footer__content-title">Thông tin chung</h5>
+                        <p><strong class="footer__content-strong">Sheepo Sport</strong> là hệ thống cửa hàng cầu lông với hơn 50 chi nhánh trên toàn quốc, cung cấp sỉ và lẻ các mặt hàng dụng cụ cầu lông từ phong trào tới chuyên nghiệp</p>
+                        <p><strong class="footer__content-strong">Với sứ mệnh:</strong> "Sheepo cam kết mang đến những sản phẩm, dịch vụ chất lượng tốt nhất phục vụ cho người chơi thể thao để nâng cao sức khỏe của chính mình."</p>
+                        <p><strong class="footer__content-strong">Tầm nhìn:</strong> "Trở thành nhà phân phối và sản xuất thể thao lớn nhất Việt Nam"</p>
+                    </div>
+                    <div class="col-lg-2 col-md-6 mb-4">
+                        <h5 class="footer__content-title">Sản phẩm</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Vợt cầu lông</a></li>
+                            <li><a href="#">Balo cầu lông</a></li>
+                            <li><a href="#">Quần áo cầu lông</a></li>
+                            <li><a href="#">Giày cầu lông</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 mb-4">
+                        <h5 class="footer__content-title">Hỗ trợ</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Liên hệ</a></li>
+                            <li><a href="#">Bảo hành</a></li>
+                            <li><a href="#">Đổi trả</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <h5 class="footer__content-title">Liên hệ</h5>
+                        <p><i class="fas fa-map-marker-alt me-2"></i> 123 Đường ABC, Quận 1, TP.HCM</p>
+                        <p><i class="fas fa-phone me-2"></i> 0123 456 789</p>
+                        <p><i class="fas fa-envelope me-2"></i> info@sheepo.vn</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4" />
+                <div class="text-center">
+                    <p class="text-muted">&copy; 2025 Sheepo. Tất cả quyền được bảo lưu.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Modal Đăng Nhập -->
+        <div class="loginModal modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="loginModal__content modal-content">
+                    <div class="loginModal__header modal-header">
+                        <h5 class="loginModal__header-title modal-title" id="loginModalLabel">Đăng nhập</h5>
+                        <button type="button" class="loginModal__header-btn--close btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                    </div>
+                    <div class="loginModal__body modal-body">
+                        <form class="loginModal__body-form">
+                            <div class="loginModal__body-form--item mb-3">
+                                <label for="username" class="loginModal__body-form--label form-label">Tên đăng nhập</label>
+                                <input type="text" class="form-control" id="username" placeholder="Nhập tên đăng nhập" required />
+                            </div>
+                            <div class="loginModal__body-form--item mb-3">
+                                <label for="password" class="loginModal__body-form--label form-label">Mật khẩu</label>
+                                <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" required />
+                            </div>
+                            <div class="loginModal__body-form--item form-check mb-3">
+                                <input type="checkbox" class="form-check-input" id="rememberMe" />
+                                <label class="form-check-label" for="rememberMe">Ghi nhớ đăng nhập</label>
+                            </div>
+                            <button type="submit" class="loginModal__body--btn btn w-100">Đăng nhập</button>
+                            <p class="loginModal__body--text mt-3 text-center">Chưa có tài khoản? <a href="#" class="loginModal__body--link" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#registerModal">Đăng ký</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Đăng ký -->
+        <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="registerModalLabel">Đăng ký</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="registerForm">
+                            <div class="mb-3">
+                                <label for="regUsername" class="form-label">Tên người dùng</label>
+                                <input type="text" class="form-control" id="regUsername" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="regEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="regEmail" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="regPassword" class="form-label">Mật khẩu</label>
+                                <input type="password" class="form-control" id="regPassword" required />
+                            </div>
+                            <button type="submit" class="btn btn-success w-100">Đăng ký</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/cart.js"></script>
+        <!-- BT js -->
+        <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

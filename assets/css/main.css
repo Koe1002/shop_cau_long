@@ -1,0 +1,299 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --accent-color: #f093fb;
+    --dark-bg: #1a1a2e;
+    --light-bg: #f8f9fa;
+    --white-color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Back to top icon */
+.arrow__on-top {
+    position: fixed;
+    bottom: 160px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.arrow__on-top--link {
+    color: var(--white-color);
+    padding: 10px 12px;
+    border-radius: 50%;
+    transition: all 0.3s;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.arrow__on-top--link:hover {
+    background-color: var(--secondary-color);
+}
+
+.arrow__on-top--icon {
+    font-size: 24px;
+}
+
+/* Zalo */
+.zalo-chat {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.zalo-chat--icon {
+    width: 60px;
+    border-radius: 20px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Styles */
+.header__navbar {
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.header__navbar-brand {
+    font-weight: bold;
+    color: var(--text-color) !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header__navbar-list .header__nav-link {
+    position: relative;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    color: var(--white-color) !important;
+}
+
+.header__navbar-list .header__nav-link:hover {
+    color: var(--accent-color) !important;
+    transform: translateY(-2px);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.header__navbar-list .header__nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background: var(--accent-color);
+    transition: all 0.6s ease;
+    transform: translateX(-50%);
+}
+
+.header__navbar-list .header__nav-link:hover::after {
+    width: 100%;
+}
+
+.header__navbar-brand {
+    width: 100px;
+    height: 100%;
+}
+
+.header__navbar-brand-img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+/*  Carousel */
+.carousel-container {
+    margin-top: 30px;
+    padding-top: 40px;
+}
+
+/* Product  */
+.product__title {
+    display: block;
+    width: 100%;
+}
+.product__title--text {
+    display: inline;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.product__card-body {
+    min-height: 150px;
+}
+
+.product__card-title {
+    font-size: 1rem;
+    line-height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product__card-btn {
+    color: var(--white-color);
+    background: var(--primary-color);
+}
+
+@media (max-width: 448px) {
+    .product__card-btn > span {
+        display: none;
+    }
+}
+
+.product__card-btn:hover {
+    background: rgba(102, 126, 234, 0.8);
+    color: var(--white-color);
+}
+
+/* Sale off */
+.sale-title {
+    width: 100%;
+}
+
+.sale-title--text {
+    display: inline;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.sale-img {
+    display: block;
+    width: 100%;
+}
+
+/* Sản phẩm cầu lông */
+.badmintonProducts__title--text {
+    display: inline;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.badmintonProducts__card {
+    overflow: hidden;
+    position: relative;
+}
+
+.badmintonProducts__card-img {
+    padding: 10px;
+    opacity: 0.8;
+}
+
+.badmintonProducts__card:hover .badmintonProducts__card-img {
+    opacity: 1;
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+}
+.badmintonProducts__card:hover .badmintonProducts__card-title {
+    opacity: 0.5;
+}
+
+.badmintonProducts__card-title {
+    position: absolute;
+    opacity: 1;
+    top: 50%;
+    margin: 0;
+    left: 40px;
+    right: 40px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 0px;
+    color: var(--white-color);
+    text-transform: uppercase;
+    background: rgba(240, 147, 251, 0.85);
+    transform: skew(-10deg) rotate(-10deg) translateY(-50%);
+    -webkit-transform: skew(-10deg) rotate(-10deg) translateY(-50%);
+}
+
+/* Footer */
+.footer {
+    background: var(--dark-bg);
+    color: var(--white-color);
+    padding: 50px 0 20px;
+}
+
+.footer__content-title {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.footer__content-strong {
+    color: var(--primary-color);
+}
+
+.footer a {
+    color: var(--white-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+.social-icons {
+    text-align: left;
+}
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white-color);
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal */
+.loginModal__header-title {
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.loginModal__body--btn {
+    outline: none;
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+
+.loginModal__body--btn:hover {
+    background: var(--secondary-color);
+    color: var(--white-color);
+}
+
+.loginModal__body--link {
+    color: var(--primary-color);
+}
+
+.loginModal__body--link:hover {
+    color: var(--secondary-color);
+}
