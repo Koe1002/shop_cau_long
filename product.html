@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/font/bootstrap-icons.min.css" />
+        <link rel="stylesheet" href="./assets/css/main.css" />
+        <link rel="stylesheet" href="./assets/css/product.css" />
+    </head>
+    <body>
+        <!-- Back to top -->
+        <div class="arrow__on-top">
+            <a href="#header" class="arrow__on-top--link">
+                <i class="arrow__on-top--icon fa-solid fa-square-caret-up"></i>
+            </a>
+        </div>
+
+        <!-- Zalo chat -->
+        <div class="zalo-chat">
+            <a href="#" class="zalo-chat--link">
+                <img src="assets/img/Icon_of_Zalo.svg.png" class="zalo-chat--icon" alt="Zalo" />
+            </a>
+        </div>
+
+        <!-- Header -->
+        <header class="header" id="header">
+            <nav class="header__navbar navbar navbar-expand-lg fixed-top">
+                <div class="header__nav-container container">
+                    <a class="header__navbar-brand navbar-brand" href="index.html">
+                        <img src="assets/img/logo.png" alt="" class="header__navbar-brand-img" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="header__navbar-list navbar-nav me-auto">
+                            <li class="header__nav-item nav-item">
+                                <a class="header__nav-link nav-link" href="/index.html">Trang chủ</a>
+                            </li>
+                            <li class="header__nav-item nav-item">
+                                <a class="header__nav-link nav-link" href="product.html">Sản phẩm</a>
+                            </li>
+                            <li class="header__nav-item nav-item">
+                                <a class="header__nav-link nav-link" href="#sale">Sale off</a>
+                            </li>
+                            <li class="header__nav-item nav-item">
+                                <a class="header__nav-link nav-link" href="#footer">Liên hệ</a>
+                            </li>
+                        </ul>
+                        <ul class="header__navbar-list navbar-nav">
+                            <li class="header__nav-item nav-item">
+                                <a class="header__nav-link nav-link" href="#badmintonProducts"><i class="fas fa-search"></i>Tìm kiếm sản phẩm </a>
+                            </li>
+                            <li class="header__nav-item nav-item">
+                                <a class="header__nav-link nav-link" href="cart.html">
+                                    <i class="fas fa-shopping-cart"> </i>
+                                    <i id="count_cart" class="badge bg-danger"></i>
+                                    Giỏ hàng
+                                </a>
+                            </li>
+                            <li class="header__nav-item nav-item">
+                                <a class="header__nav-link nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal" id="accountLink"> <i class="fas fa-user"></i> Tài khoản </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Bộ lọc sản phẩm -->
+        <section class="products-section">
+            <div class="container">
+                <div class="page-title">
+                    <h1>Sản phẩm cầu lông</h1>
+                    <p>Khám phá bộ sưu tập đầy đủ các sản phẩm cầu lông chất lượng cao từ Sheepo Sport</p>
+                </div>
+
+                <!-- Bộ lọc -->
+                <div class="filter-section">
+                    <h3 class="filter-title"><i class="fas fa-filter me-2"></i>Bộ lọc sản phẩm</h3>
+                    <div class="row g-3">
+                        <div class="col-md-3">
+                            <div class="filter-group">
+                                <label>Danh mục</label>
+                                <select class="form-select" id="categoryFilter">
+                                    <option value="">Tất cả danh mục</option>
+                                    <option value="racket">Vợt cầu lông</option>
+                                    <option value="shoes">Giày cầu lông</option>
+                                    <option value="clothing">Quần áo</option>
+                                    <option value="bag">Túi & Balo</option>
+                                    <option value="accessories">Phụ kiện</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="filter-group">
+                                <label>Thương hiệu</label>
+                                <select class="form-select" id="brandFilter">
+                                    <option value="">Tất cả thương hiệu</option>
+                                    <option value="VNB">VNB</option>
+                                    <option value="Yonex">Yonex</option>
+                                    <option value="Victor">Victor</option>
+                                    <option value="Lining">Li-Ning</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="filter-group">
+                                <label>Khoảng giá</label>
+                                <select class="form-select" id="priceFilter">
+                                    <option value="">Tất cả mức giá</option>
+                                    <option value="0-500000">Dưới 500.000đ</option>
+                                    <option value="500000-1000000">500.000đ - 1.000.000đ</option>
+                                    <option value="1000000-2000000">1.000.000đ - 2.000.000đ</option>
+                                    <option value="2000000-">Trên 2.000.000đ</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="filter-group">
+                                <label>Tìm kiếm</label>
+                                <input type="text" class="form-control" id="searchInput" placeholder="Nhập tên sản phẩm..." />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <button class="btn btn-filter" onclick="applyFilters()"><i class="fas fa-search me-2"></i>Tìm kiếm</button>
+                            <button class="btn btn-outline-secondary ms-2" onclick="clearFilters()"><i class="fas fa-times me-2"></i>Xóa bộ lọc</button>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <select class="form-select d-inline-block w-auto" id="sortSelect">
+                                <option value="name-asc">Tên A-Z</option>
+                                <option value="name-desc">Tên Z-A</option>
+                                <option value="price-asc">Giá thấp → cao</option>
+                                <option value="price-desc">Giá cao → thấp</option>
+                                <option value="newest">Mới nhất</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loading State -->
+                <div id="loadingState" class="loading-state" style="display: none">
+                    <div class="loading-spinner"></div>
+                    <p>Đang tải sản phẩm...</p>
+                </div>
+
+                <!-- Product Grid -->
+                <div id="productGrid" class="product-grid">
+                    <!-- Products will be loaded here -->
+                </div>
+
+                <!-- Empty State -->
+                <div id="emptyState" class="empty-state" style="display: none">
+                    <i class="fas fa-search"></i>
+                    <h3>Không tìm thấy sản phẩm</h3>
+                    <p>Thử thay đổi bộ lọc hoặc từ khóa tìm kiếm</p>
+                </div>
+
+                <!--  -->
+                <div class="pagination-container">
+                    <nav>
+                        <ul class="pagination" id="pagination">
+                            <!-- Pagination will be generated here -->
+                        </ul>
+                    </nav>
+                </div>
+                <div class="row row-cols-lg-5 row-cols-md-3 row-cols-2 g-4">
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot1.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V200 Xanh chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V200 Xanh chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 529.000 ₫</p>
+                                <button class="product__card-btn btn w-100" data-name="Vợt cầu lông VNB V200 Xanh chính hãng" data-price=" 529.000" data-img="./assets/img/vot_sale/vot1.webp">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot2.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB Carbon Training 150g chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB Carbon Training 150g chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 698.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot3.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V200i Hồng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V200i Hồng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 529.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot4.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V88 xanh chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V88 xanh chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 638.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot5.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V200 Đỏ chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V200 Đỏ chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 529.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot6.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V88 cam chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V88 cam chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 638.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot7.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB TC88C" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB TC88C</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 799.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot8.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB TC88C" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB TC88C</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 799.000₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot1.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V200 Xanh chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V200 Xanh chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 529.000 ₫</p>
+                                <button class="product__card-btn btn w-100" data-name="Vợt cầu lông VNB V200 Xanh chính hãng" data-price=" 529.000" data-img="./assets/img/vot_sale/vot1.webp">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot2.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB Carbon Training 150g chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB Carbon Training 150g chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 698.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot3.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V200i Hồng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V200i Hồng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 529.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot4.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V88 xanh chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V88 xanh chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 638.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot5.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V200 Đỏ chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V200 Đỏ chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 529.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot6.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V88 cam chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V88 cam chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 638.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot7.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB TC88C" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB TC88C</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 799.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot8.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB TC88C" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB TC88C</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 799.000₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot1.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V200 Xanh chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V200 Xanh chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 529.000 ₫</p>
+                                <button class="product__card-btn btn w-100" data-name="Vợt cầu lông VNB V200 Xanh chính hãng" data-price=" 529.000" data-img="./assets/img/vot_sale/vot1.webp">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot2.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB Carbon Training 150g chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB Carbon Training 150g chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 698.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot3.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V200i Hồng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V200i Hồng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 529.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot4.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V88 xanh chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V88 xanh chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 638.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot5.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V200 Đỏ chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V200 Đỏ chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 529.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot6.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V88 cam chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V88 cam chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 638.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot7.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB TC88C" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB TC88C</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 799.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot8.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB TC88C" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB TC88C</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 799.000₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot1.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V200 Xanh chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V200 Xanh chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 529.000 ₫</p>
+                                <button class="product__card-btn btn w-100" data-name="Vợt cầu lông VNB V200 Xanh chính hãng" data-price=" 529.000" data-img="./assets/img/vot_sale/vot1.webp">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot2.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB Carbon Training 150g chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB Carbon Training 150g chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 698.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot3.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V200i Hồng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V200i Hồng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 529.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot4.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V88 xanh chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V88 xanh chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 638.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot5.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V200 Đỏ chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V200 Đỏ chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 529.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot6.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V88 cam chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V88 cam chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 638.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot7.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB TC88C" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB TC88C</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 799.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot8.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB TC88C" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB TC88C</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 799.000₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot1.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V200 Xanh chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V200 Xanh chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 529.000 ₫</p>
+                                <button class="product__card-btn btn w-100" data-name="Vợt cầu lông VNB V200 Xanh chính hãng" data-price=" 529.000" data-img="./assets/img/vot_sale/vot1.webp">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot2.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB Carbon Training 150g chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB Carbon Training 150g chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 698.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot3.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V200i Hồng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V200i Hồng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 529.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot4.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V88 xanh chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V88 xanh chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 638.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot5.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V200 Đỏ chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V200 Đỏ chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 529.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot6.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB V88 cam chính hãng" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB V88 cam chính hãng</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 638.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot7.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB TC88C" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB TC88C</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 799.000 ₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item col">
+                        <div class="product__card card h-100">
+                            <img src="./assets/img/vot_sale/vot8.webp" class="product__card-img card-img-top" alt="Vợt cầu lông VNB TC88C" />
+                            <div class="product__card-body card-body">
+                                <h5 class="product__card-title card-title">Vợt cầu lông VNB TC88C</h5>
+                                <p class="product__card-price fw-bold text-danger">Giá: 799.000₫</p>
+                                <button class="product__card-btn btn w-100">
+                                    <i class="fas fa-cart-plus me-1"></i>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer" id="footer">
+            <div class="footer__container container">
+                <div class="footer__content row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <h5 class="footer__content-title">Thông tin chung</h5>
+                        <p><strong>Sheepo Sport</strong> là hệ thống cửa hàng cầu lông với hơn 50 chi nhánh trên toàn quốc, cung cấp sỉ và lẻ các mặt hàng dụng cụ cầu lông từ phong trào tới chuyên nghiệp</p>
+                        <p><strong>Với sứ mệnh:</strong> "Sheepo cam kết mang đến những sản phẩm, dịch vụ chất lượng tốt nhất phục vụ cho người chơi thể thao để nâng cao sức khỏe của chính mình."</p>
+                    </div>
+                    <div class="col-lg-2 col-md-6 mb-4">
+                        <h5 class="footer__content-title">Sản phẩm</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" onclick="filterByCategory('racket')">Vợt cầu lông</a></li>
+                            <li><a href="#" onclick="filterByCategory('bag')">Balo cầu lông</a></li>
+                            <li><a href="#" onclick="filterByCategory('clothing')">Quần áo cầu lông</a></li>
+                            <li><a href="#" onclick="filterByCategory('shoes')">Giày cầu lông</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 mb-4">
+                        <h5 class="footer__content-title">Hỗ trợ</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Liên hệ</a></li>
+                            <li><a href="#">Bảo hành</a></li>
+                            <li><a href="#">Đổi trả</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <h5 class="footer__content-title">Liên hệ</h5>
+                        <p><i class="fas fa-map-marker-alt me-2"></i> 123 Đường ABC, Quận 1, TP.HCM</p>
+                        <p><i class="fas fa-phone me-2"></i> 0123 456 789</p>
+                        <p><i class="fas fa-envelope me-2"></i> info@sheepo.vn</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4" />
+                <div class="text-center">
+                    <p class="text-muted">&copy; 2025 Sheepo. Tất cả quyền được bảo lưu.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Modal Đăng Nhập -->
+        <div class="loginModal modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="loginModal__content modal-content">
+                    <div class="loginModal__header modal-header">
+                        <h5 class="loginModal__header-title modal-title" id="loginModalLabel">Đăng nhập</h5>
+                        <button type="button" class="loginModal__header-btn--close btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                    </div>
+                    <div class="loginModal__body modal-body">
+                        <form class="loginModal__body-form">
+                            <div class="loginModal__body-form--item mb-3">
+                                <label for="username" class="loginModal__body-form--label form-label">Tên đăng nhập</label>
+                                <input type="text" class="form-control" id="username" placeholder="Nhập tên đăng nhập" required />
+                            </div>
+                            <div class="loginModal__body-form--item mb-3">
+                                <label for="password" class="loginModal__body-form--label form-label">Mật khẩu</label>
+                                <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" required />
+                            </div>
+                            <div class="loginModal__body-form--item form-check mb-3">
+                                <input type="checkbox" class="form-check-input" id="rememberMe" />
+                                <label class="form-check-label" for="rememberMe">Ghi nhớ đăng nhập</label>
+                            </div>
+                            <button type="submit" class="loginModal__body--btn btn w-100">Đăng nhập</button>
+                            <p class="loginModal__body--text mt-3 text-center">Chưa có tài khoản? <a href="#" class="loginModal__body--link" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#registerModal">Đăng ký</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Đăng ký -->
+        <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="registerModalLabel">Đăng ký</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="registerForm">
+                            <div class="mb-3">
+                                <label for="regUsername" class="form-label">Tên người dùng</label>
+                                <input type="text" class="form-control" id="regUsername" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="regEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="regEmail" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="regPassword" class="form-label">Mật khẩu</label>
+                                <input type="password" class="form-control" id="regPassword" required />
+                            </div>
+                            <button type="submit" class="btn btn-success w-100">Đăng ký</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/cart.js"></script>
+        <!-- BT js -->
+        <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

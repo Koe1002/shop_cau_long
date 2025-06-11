@@ -122,3 +122,14 @@
     color: #a71e2a;
     transform: scale(1.2);
 }
+
+.paying-btn {
+    background-color: var(--primary-color);
+}
+
+.paying-btn a {
+    text-decoration: none;
+    color: var(--white-color);
+    width: 100%;
+    display: block;
+}

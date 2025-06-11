@@ -1,0 +1,62 @@
+#F1 {
+    width: 70%;
+    margin: 100px auto;
+    padding: 20px 30px;
+    border-radius: 3px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+legend {
+    color: var(--accent-color);
+    font-weight: 500;
+    text-align: center;
+}
+
+label {
+    display: block;
+    color: var(--white-color);
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+#output {
+    color: var(--white-color);
+    width: 70%;
+    margin: 100px auto;
+    padding: 20px 30px;
+    border-radius: 3px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+#output h3 {
+    color: var(--white-color);
+    text-align: center;
+}
+
+#output a {
+    background: var(--accent-color);
+}
+
+#output a:hover {
+    background: var(--secondary-color);
+}
+button {
+    background: var(--accent-color);
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+}
+
+button:hover {
+    background: var(--secondary-color);
+    color: var(--white-color);
+}
